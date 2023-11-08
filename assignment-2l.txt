@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+        <div id="header" class="Head"></div>
+        <h2>HTML ELEMENTS WITH ATTRIBUTES</h2><hr><hr>
+        <a href="#mango" target="_parent">Mangoes </a>&nbsp<a>|</a>&nbsp
+        <a href="#apple" target="_parent">Apples</a>&nbsp<a>|</a>&nbsp
+        <a href="#orange" target="_parent">Oranges</a>&nbsp<a>|</a>&nbsp
+        <a href="#footer" target="_parent">Footer</a>
+        
+        
+        <br>
+        <h2>Mangoes</h2><hr><hr>
+        <img src="mango.jpeg"
+        id="mango"
+        class="MY_SECTION"
+        >
+        <img src="mango.jpeg"
+        id="mango"
+        class="MY_SECTION"
+        ><br>
+        <hr>
+        <img src="mango.jpeg"
+        id="mango"
+        class="MY_SECTION"
+        >
+        <h2>Apples</h2><hr><hr>
+        <img src="apple.jpeg"
+        id="apple"
+        class="MY_SEC"
+        >
+        <img src="apple.jpeg"
+        id="apple"
+        class="MY_SEC"
+        ><br><hr>
+        <img src="apple.jpeg"
+        id="apple"
+        class="MY_SEC"
+        >
+        <h2>Oranges</h2><hr><hr>
+        <img src="orange.jpeg"
+        id="orange"
+        class="SECTION"
+        >
+        <img src="orange.jpeg"
+        id="orange"
+        class="SECTION"
+        ><br><hr>
+        <img src="orange.jpeg"
+        id="orange"
+        class="SECTION"
+        >
+        <pre>
+        </pre>
+        <hr>
+        <div id="div" class="div_class"></div>
+        <a href="https://www.google.com/"><button>Google</button></a>
+        <a href="https://www.facebook.com"><button>Facebook</button></a>
+        <a href="https://www.careercharge.in/"><button>CarrerCharge</button></a>
+        <a href="#header"><button>HEADER</button></a>
+        <div id="footer" class="foot"></div>
+
+        </body>
+    </head>
+</html>

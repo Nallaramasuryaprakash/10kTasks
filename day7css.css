@@ -1,0 +1,13 @@
+table,th,td
+        {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 500px;
+            height: 100px;
+            text-align: center;
+            color: blueviolet;
+            background-color: lavenderblush;
+            font-size: larger;
+            font-weight: 500;
+            font-style: italic;
+        }

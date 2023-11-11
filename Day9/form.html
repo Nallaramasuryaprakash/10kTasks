@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        legend
+        {
+            font-family:serif;
+            font-size: 50px;
+            color: orangered;
+        }
+        *
+        {
+            background-color:lavender;
+        }
+        label,p
+        {
+            color:teal;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #sub:hover {
+            background-color: green;
+            color: white;
+            
+        }
+
+        .res:hover
+        {
+            background-color: red;
+            color: white;
+        }
+        a
+        {
+            text-decoration: none;
+            color: blue;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Student Review</legend>
+    <form method="post">
+        <br>
+        <label for="Firstname"><b>First Name:- </b></label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name"  pattern="[A-Za-z]+" ><br><br>
+            <label for="Lastname"><b>Last Name:- </b></label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter Your Last Name" pattern="[A-Za-z]+" ><br><br>
+            <label for="Mobile"><b>Mobile Number:- </b></label>
+            <input name="Mobile" id="Mobile" type="tel" pattern="[6-9]{1}[0-9]{9}" placeholder="Enter your mobile number" ><br><br>
+            <label for="email"><b>Email:- </b></label>
+            <input type="email" name="email" id="email" placeholder="Enter your Email" ><br>
+            <p><b>Select Your Gender:- </b></p>
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" value="Male" id="Male">
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" value="Female" id="Female"><br><br>
+            <label for="review"><b>Write your Review:</b></label><br>
+            <textarea id="review" name="review" row="10" cols="50" autofocus></textarea><br><br>
+            <button formaction="thanks.html" id="sub">submit</button>
+            <input class="res" type="reset" value="Clear">
+    </form><br>
+    <a href="sat.html">Back to the topics</a>
+    </fieldset>
+</body>
+</html>

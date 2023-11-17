@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label[for]      /*CSS [attribute] Selector */
+        {
+            color: blue;
+            font-size: 25px;
+        }
+        input[type="text"]  /*Css [attribute="value"] selector*/
+        {
+            background-color: gold;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding: 10px;
+        }
+        [name~="review"]    /* selector which attribute have the same value we are used here*/
+        {
+            width: 300px;
+            border-radius: 10px;
+            background-color: yellowgreen;
+            color: white;
+            font-size: x-large;
+            
+        }
+        [for|="gender"] /* the attribute value can have alone gender or any gender-male it should have gender first in the attribute to apply*/
+        {
+            color: Red;
+            background-color: chartreuse;
+        }
+        [class^="res"]      /*The following example selects all elements with a class attribute value that starts with "res"*/
+        {
+            color: purple;
+            font-size: 15px;
+            background-color: yellow;
+        }
+        [id$="sub"]  /*The following example selects all elements with a class attribute value that ends with "sub" the word can be seperated or combined word it should have ending value as sub*/
+        {
+            background-color: seashell;
+            color: crimson;
+            padding: 10px;
+        }
+        [type*="l"] /*attribute with small l in the form this css will get applied*/
+        {
+            padding: 15px;
+            border-radius: 10px;
+            color: green;
+            background-color: beige;
+            font-size: 20px;
+        }
+        [class~="box"]
+        {
+            font-size: 50px;
+            text-align: center;
+            background-color: springgreen;
+            padding: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend class="box">Student Review</legend>
+    <form method="post">
+        <br>
+            <label for="Firstname" ><b>First Name:- </b></label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name"  pattern="[A-Za-z]+" ><br><br>
+            <label for="Lastname"><b>Last Name:- </b></label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter Your Last Name" pattern="[A-Za-z]+" ><br><br>
+            <label for="Mobile"><b>Mobile Number:- </b></label>
+            <input name="Mobile" id="Mobile" type="tel" pattern="[6-9]{1}[0-9]{9}" placeholder="Enter your mobile number" ><br><br>
+            <label for="email"><b>Email:- </b></label>
+            <input type="email" name="email" id="email" placeholder="Enter your Email" ><br>
+            <p for="gender-type"><b>Select Your Gender:- </b></p>
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" value="Male" id="Male">
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" value="Female" id="Female"><br><br>
+            <label for="review"><b>Write your Review:</b></label><br>
+            <textarea id="review" name="review" row="10" cols="50" autofocus></textarea><br><br>
+            <button formaction="thanks.html" id="formsub">submit</button>
+            <input class="res" type="reset" value="Clear">
+    </form><br>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin-top: 50px;
+            margin-left: 350px;
+            background-image: linear-gradient(orange,white,green);
+            background-size:cover;
+        }
+        .con
+        {
+            padding: 20px;
+            border: 1px solid black;
+            height: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 850px;
+            background-image: url(./bg.avif);
+            background-size: 600px;
+        }
+        .card
+        {
+            border: 1px solid black;
+            height: 200px;
+            width: 250px;
+            padding: 10px;
+            background-image: linear-gradient(red, yellow, blue, green);
+            
+        }
+        .cap
+        {
+            text-align: center;
+            font-size: 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .card1:hover 
+        {
+            background-image: linear-gradient(orange, white, blue, green);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card2:hover
+        {
+            background-image: linear-gradient(blue 100px, white,red);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card3:hover
+        {
+            background-image: linear-gradient(black 100px, white 200px);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card4:hover
+        {
+            background-image: linear-gradient(red 100px, white 200px);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card5:hover
+        {
+            background-image: linear-gradient(darkgreen 100px, white 200px);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card6:hover
+        {
+            background-image: linear-gradient(red,green,gold,mediumblue,white,black);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card7:hover
+        {
+            background-image: linear-gradient(red,green,black);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card8:hover
+        {
+            background-image: linear-gradient(orangered,maroon,gold,darkgreen);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        .card9:hover
+        {
+            background-image: linear-gradient(maroon,skyblue,white,yellow);
+            height: 210px;
+            width: 260px;
+            border: 1px solid black;
+        }
+        p
+        {
+            background-color: black;
+            text-align: center;
+            width: 220px;
+            color: white;
+            font-size:x-large ;
+            margin-top: -290px;
+            display: none;
+        }
+        .board:hover p
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="board">
+           <img class="card card1" src="./bcci.jpg" height="200" width="250">
+           <p>Indian cricket team</p>
+        </div>
+        <div class="board">
+            <img class="card card2" src="./aus.jpg" height="200" width="250">
+            <p>cricket Australia</p>
+        </div>
+        <div class="board">
+            <img class="card card3" src="./nz.jpg" height="200" width="250">
+            <p>Newzland Cricket</p>
+        </div>
+        <div class="board">
+            <img class="card card4" src="./eng.png" height="200" width="250">
+            <p>England Cricket</p>
+        </div>
+        <div class="board">
+            <img class="card card5" src="./pak.jpg" height="200" width="250">
+            <p>Pakistan cricket board</p>
+        </div>
+        <div class="board">
+            <img class="card card6" src="./sa.jpg" height="200" width="250">
+            <p>South Africa Cricket</p>
+        </div>
+        <div class="board">
+            <img class="card card7" src="./afg.jpg" height="200" width="250">
+            <p>Afganistan Cricket Board</p>
+        </div>
+        <div class="board">
+            <img class="card card8" src="./sl.webp" height="200" width="250">
+            <p>Srilanka cricket board</p>
+        </div>
+        <div class="board">
+            <img class="card card9" src="./wi.jpg" height="200" width="250">
+            <p>West Indies Cricket Board</p>
+        </div>
+    </div>
+</body>
+</html>

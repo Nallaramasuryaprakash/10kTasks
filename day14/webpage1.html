@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            margin-top: -40px;
+            margin-left: 780px;
+            column-gap: 30px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .head {
+            border: 1px solid black;
+            background-color: skyblue;
+            position: sticky;
+            top: 0px;
+            
+        }
+
+        body {
+            top: 0;
+            margin: 0;
+            height: 1500px;
+        }
+
+        span {
+            position: absolute;
+            /* margin-top: 10px; */
+            margin-left: 20px;
+        }
+
+        .cont {
+            height: 1000px;
+            width: 1448px;
+            margin-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 60px;
+            row-gap: 30px;
+            justify-content: space-evenly;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+
+        .board {
+            height: 480px;
+            width: 300px;
+            border: 1px solid skyblue;
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        /* .card
+        {
+            border: 1px solid black;
+
+        } */
+        .in {
+            margin-top: -20px;
+            justify-content: center;
+            padding: 20px;
+
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .h1 {
+            background-color: slateblue;
+            color: lightsalmon;
+            z-index: 1;
+        }
+
+        .copy {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 120px;
+
+        }
+
+        .logo {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-left: 20px;
+            position: relative;
+            top: -10px;
+        }
+
+        .health-tip {
+            border: 1px solid black;
+            margin: 10px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 100px;
+            background-color: rgba(135, 207, 235, 0.518);
+        }
+
+        form>.a {
+            display: flex;
+            margin-top: -20px;
+            text-decoration: none;
+            color: white;
+            height: 35px;
+        
+        }
+
+        .a:hover {
+            background-color: rgba(220, 220, 220, 0.527);
+            justify-content: center;
+            display: flex;
+            height: 35px;
+
+        }
+
+        .card:hover {
+            background-image: linear-gradient(blue, white);
+            height: 372px;
+            width: 300px;
+            padding: 2px;
+        }
+
+        form>.button {
+            display: flex;
+            margin-top: -25px;
+            column-gap: 30px;
+            justify-content: center;
+            height: 30px;
+            padding: 5px;
+            border: 1px solid transparent;
+            background-color: rgb(38, 38, 188);
+            color: white;
+        }
+        .chat
+        {   
+            display: flex;
+            border-radius: 50%;
+            position: fixed;
+            top: 200px;
+            right: 0;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <p><img src="./logo.jpg" class="logo"><span>Clinic Website</span></p>
+        <form method="post">
+            <a href="#" class="a">Home</a>
+            <a href="#" class="a">About</a>
+            <a href="#" class="a">Appointment</a>
+            <a href="#" class="a">Services</a>
+            <a href="#" class="a">Contact</a>
+            <a href="#tips" class="a">Health tips</a>
+            <button formaction="./login.html" class="button">login ></button>
+            <button formaction="./signup.html" class="button">signup</button>
+        </form>
+    </div>
+    <h1 style="text-align: center; font-size: 40px; color: royalblue;">Online health Clinic Services</h1>
+    <div class="cont">
+        <div class="board">
+            <img class="card" src="./service1.png" height="370" width="300">
+            <h2>24/7 Services</h2>
+            <p class="in">We provide you 24/7 services with maximum comfortability.Our team mates will always guide at
+                any time.
+            </p>
+        </div>
+        <div class="board">
+            <img class="card" src="./service2.png" height="370" width="300">
+            <h2>Easy Appointment</h2>
+            <p class="in">Easy appointments are available for all kinds of patients.We can connect both online and
+                offline.</p>
+        </div>
+        <div class="board">
+            <img class="card" src="./service3.png" height="370" width="300">
+            <h2>Emergency Service</h2>
+            <p class="in">Emergency cases will be accepted at any time,treated with good care.
+            </p>
+        </div>
+        <div class="board">
+            <img class="card" src="./service4.webp" height="370" width="300">
+            <h2>Helpline Service</h2>
+            <p class="in">We are providing helpline service for everyone for knowing any information about their problem
+                by contact
+                us.</p>
+        </div>
+        <div class="board">
+            <img class="card" src="./service5.jpg" height="370" width="300">
+            <h2>Ambulance Service</h2>
+            <p class="in">We are providing free ambulance for the patients to their living place for emergency
+                situations.</p>
+        </div>
+        <div class="board">
+            <img class="card" src="./service6.jpg" height="370" width="300">
+            <h2>Pre Visit Patient Forms</h2>
+            <p class="in">Get to know your patient before their visit to clinic by online Pre-Visit Patient Form.</p>
+        </div>
+        <div class="board">
+            <img class="card" src="./service7.webp" height="370" width="300">
+            <h2>Feedback service</h2>
+            <p class="in">Let we know patient experience through feedback and we improve our services.</p>
+        </div>
+        <div class="board">
+            <img class="card" src="./service8.jpeg" height="370" width="300">
+            <h2>Medical Service</h2>
+            <p class="in">We are providing medicines for each and every person. we can provide by online or offline.</p>
+        </div>
+    </div>
+    <h1 class="h1">
+        <marquee>...We are providing best services from our Clinic...</marquee>
+    </h1>
+    <div id="tips">
+        <div class="health-tip">
+            <h3>Tip 1: Eat a Balanced Diet</h3>
+            <p>Include a variety of fruits, vegetables, lean proteins, and whole grains in your diet to maintain good
+                health.</p>
+        </div>
+        <div class="health-tip">
+            <h3>Tip 2: Exercise Regularly</h3>
+            <p>Engage in at least 30 minutes of physical activity most days to keep your body in shape.</p>
+        </div>
+        <div class="health-tip">
+            <h3>Tip 3: Stay hydrated</h3>
+            <p>Many individuals consume beverages that are high in sugar or caffeine, which do not necessarily promote
+                good health. Instead, it is necessary to drink water often! Water powers the body and encourages good
+                health.</p>
+        </div>
+        <div class="health-tip">
+            <h3>Tip 4: Get a good night's rest</h3>
+            <p> Most primary care providers recommend that one sleeps for at least eight to 10 hours every night.</p>
+        </div>
+        
+            <img src="./chat.jpg" height="50" width="50" class="chat">
+    
+    </div>
+    <div class="copy">
+        &copy; 2023 about Services in Clinic
+    </div>
+</body>
+
+</html>

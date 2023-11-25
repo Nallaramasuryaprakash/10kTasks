@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a:hover {
+            background-color: violet;
+            font-size: 20px;
+        }
+
+        a:active {
+            background-color: tan;
+            color: teal;
+            font-size: 25px;
+        }
+
+        :root
+
+        /* to create the variables */
+            {
+            --fcolor: purple;
+            --scolor: violet;
+        }
+
+        h1 {
+            color: var(--fcolor);
+            /* we use those variables to style */
+            background-color: var(--scolor);
+        }
+
+        p:first-child {
+            background-color: purple;
+            color: white;
+        }
+
+        b i:first-child
+
+        /*the selector matches the first <i> element in all <b> elements */
+            {
+            background-color: black;
+            color: gold;
+        }
+
+        h2:first-child i
+
+        /*selector matches all <i> elements in <b> elements that are the first child of another element:*/
+            {
+            background-color: yellowgreen;
+            color: purple;
+        }
+        q:lang(for) /*to add quatation marks*/
+        {
+            quotes: "","";
+            color: blue;
+        }
+        :target
+        {
+            background-color: violet;
+            outline: 4px solid green;
+        }
+        input:valid
+        {
+            border: 2px solid green;
+        }
+        input:focus
+        {
+            background-color: plum;
+            outline: 2px solid red;
+            box-shadow: 3px 3px green;
+        }
+        .child:nth-child(even)
+        {
+            font-size: 30px;
+        }
+        .child:nth-child(odd)
+        {
+            background-color: orange;
+        }
+        
+        /* pseudo element css */
+        pre::first-line
+        {
+            color: green;
+        }
+        pre::first-letter
+        {
+            font-size: 24px;
+            background-color: green;
+            color: white;
+        }
+        p::before
+        {
+            content: "1";
+        }
+        p::after
+        {
+            content: " practice";
+        }
+        li::marker
+        {
+            color: red;
+        }
+        li::selection
+        {
+            color: white;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.google.com">Google</a>
+    <h1>CSS Pseudo-Class</h1>
+
+    <p>HTML</p>
+    <p>CSS</p>
+
+    <div>
+        <p>JS</p>
+        <p>React</p>
+    </div>
+
+    <b>The <i>course</i> name is <i>front-end</i>develepoment</b><br>
+    <b>The course name is <i>front-end</i>develepoment</b>
+    <h2>The <i>course</i> name is <i>front-end</i>develepoment</h2>
+    <div>
+        <h2>The <i>course</i> name is <i>front-end</i>develepoment</h2>
+    </div>
+    <h3>Todays practice session about <q lang="for">css</q></h3>
+    <a href="#div1">one</a>
+    <a href="#div2">two</a>
+    <div id="div1" style="border: 1px dotted purple; width: 100px; height: 100px;"></div>
+    <br>
+    <div id="div2" style="border: 1px dotted purple; width: 100px; height: 100px;"></div>
+    <br>
+    <form>
+        <input type="email">
+    </form>
+    <div>
+        <p class="child">1</p>
+        <p class="child">2</p>
+        <p class="child">3</p>
+        <p class="child">4</p>
+        <p class="child">5</p>
+        <p class="child">6</p>
+    </div>
+    <br>
+    <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+Commodi corrupti cum, nobis doloribus eligendi ea consequuntur possimus iste. Obcaecati aut ipsum exercitationem culpa itaque nemo a! Architecto excepturi at veritatis.</pre>
+<ol>
+    <li>Html</li>
+    <li>Css</li>
+    <li>Js</li>
+</ol>
+</body>
+
+</html>

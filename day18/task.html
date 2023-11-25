@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-11-23</title>
+    <style>
+        .main {
+            /* border: 1px solid black; */
+            height: 1250px;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.559);
+        }
+
+        .main2 {
+            /* border: 1px solid black; */
+            height: 1250px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .side {
+            /* border: 1px solid black; */
+            width: 500px;
+            height: 1250px;
+            background-color: rgba(128, 128, 128, 0.559);
+            /* border-radius: 10px; */
+
+        }
+
+        p {
+            border: 1px solid black;
+            width: 440px;
+            display: inline-block;
+            height: 30px;
+            position: relative;
+            top: -8px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .para {
+            display: none;
+            position: absolute;
+            left: 850px;
+            top: 100px;
+            border: 1px solid black;
+            height: 200px;
+            width: 100px;
+            cursor: pointer;
+
+        }
+
+        .in2:checked~.para {
+            display: block;
+            background-color: turquoise;
+            transform: rotate(10deg);
+
+        }
+
+        .in1:checked~.para {
+            display: block;
+            background-color: greenyellow;
+            transform: none;
+        }
+
+        .in3:checked~.para {
+            display: block;
+            background-color: pink;
+            transform: rotate(45deg);
+        }
+
+        .in4:checked~.para {
+            display: block;
+            background-color: blue;
+            color: white;
+            transform: rotateX(45deg);
+        }
+
+        .in5:checked~.para {
+            display: block;
+            background-color: red;
+            color: white;
+            transform: rotateX(100deg);
+        }
+
+        .in6:checked~.para {
+            display: block;
+            background-color: purple;
+            color: white;
+            transform: rotateY(45deg);
+        }
+
+        .in7:checked~.para {
+            display: block;
+            background-color: green;
+            color: white;
+            transform: rotateY(80deg);
+        }
+
+        .in8:checked~.para {
+            display: block;
+            background-color: blueviolet;
+            color: white;
+            transform: skew(20deg, 20deg);
+        }
+
+        .in9:checked~.para {
+            display: block;
+            background-color: tomato;
+            transform: skew(30deg, 30deg);
+        }
+
+        .in10:checked~.para {
+            display: block;
+            background-color: teal;
+            color: white;
+            transform: skewX(30deg);
+        }
+
+        .in11:checked~.para {
+            display: block;
+            background-color: springgreen;
+            transform: skewX(40deg);
+        }
+
+        .in12:checked~.para {
+            display: block;
+            background-color: brown;
+            color: white;
+            transform: translate(20px, 10px);
+        }
+
+        .in13:checked~.para {
+            display: block;
+            background-color: seagreen;
+            color: white;
+            transform: translate(20px, 20px);
+        }
+
+        .in14:checked~.para {
+            display: block;
+            background-color: peru;
+            color: white;
+            transform: scale(2, 2);
+        }
+
+        .in15:checked~.para {
+            display: block;
+            background-color: palegreen;
+            transform: scale(2, 3);
+        }
+
+        .in16:checked~.para {
+            display: block;
+            background-color: orangered;
+            color: white;
+            transform: matrix(0.866, 0.7, -0.8, 0.866, 0, 0);
+        }
+
+        .in17:checked~.para {
+            display: block;
+            background-color: chartreuse;
+            transform: matrix(0.586, 0.8, -0.8, 0.586, 0, 0);
+
+        }
+
+        .in18:checked~.para {
+            display: block;
+            background-color: lightblue;
+            transform: matrix(0.586, 0.8, -0.8, 0.586, 40, 30);
+
+        }
+
+        .in19:checked~.para {
+            display: block;
+            background-color: goldenrod;
+            transform: skewY(30deg);
+        }
+
+        input[type=radio]+p {
+            color: #ccc;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        input[type=radio]:checked+p {
+            color: white;
+            background-color: black;
+            font-style: normal;
+        }
+
+        input[type=radio] {
+            height: 15px;
+            width: 20px;
+            cursor: pointer;
+        }
+
+        .in {
+            margin-top: -5px;
+        }
+
+        span {
+            position: relative;
+            top: 5px;
+        }
+
+        p:hover {
+            /* opacity: 1; */
+            background-color: midnightblue;
+        }
+        .in20:checked~.para {
+            display: block;
+            background-color: darkgreen;
+            color: white;
+            transform: skewY(40deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main2">
+            <div class="side">
+                <input type="radio" name="transform" id="none" checked="checked" class="in1">
+                <p><span>Transform:none;</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="10deg" checked="checked" class="in2 in">
+                <p><span>transform: rotate(10deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="45deg" checked="checked" class="in3 in">
+                <p><span>transform: rotate(45deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="X45deg" checked="checked" class="in4 in">
+                <p><span>transform: rotateX(45deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="X100deg" checked="checked" class="in5 in">
+                <p><span>transform: rotateX(100deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="Y45deg" checked="checked" class="in6 in">
+                <p><span>transform: rotateY(45deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="Y80deg" checked="checked" class="in7 in">
+                <p><span>transform: rotateY(80deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="2020" checked="checked" class="in8 in">
+                <p><span>transform: skew(20deg,20deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="3030" checked="checked" class="in9 in">
+                <p><span>transform: skew(30deg,30deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="X30" checked="checked" class="in10 in">
+                <p><span>transform: skewX(30deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="X40" checked="checked" class="in11 in">
+                <p><span>transform: skewX(40deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="T2010" checked="checked" class="in12 in">
+                <p><span>transform: translate(20px,10px);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="T2020" checked="checked" class="in13 in">
+                <p><span>transform: translate(20px,20px);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="S22" checked="checked" class="in14 in">
+                <p><span>transform: scale(2,2);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="S23" checked="checked" class="in15 in">
+                <p><span>transform: scale(2,3);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="m1" checked="checked" class="in16 in">
+                <p><span>transform: matrix(0.866,0.7,-0.8,0.866,0,0);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="m2" checked="checked" class="in17 in">
+                <p><span>transform: matrix(0.586,0.8,-0.8,0.586,0,0);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="m2" checked="checked" class="in18 in">
+                <p><span>transform: matrix(0.586,0.8,-0.8,0.586,40,30);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="X40" checked="checked" class="in19 in">
+                <p><span>transform: skewY(30deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+                <input type="radio" name="transform" id="X40" checked="checked" class="in20 in">
+                <p><span>transform: skewY(40deg);</span></p>
+                <div class="para">The transform property applies a 2D or 3D transformation to an element. This property
+                    allows you to rotate, scale, move, skew, etc., elements.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

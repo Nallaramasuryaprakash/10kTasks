@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            background-image: url(https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1701043200&semt=ais);
+            background-size: cover;
+           
+        }
+       
+        .circle {
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            border: 1px solid gray;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .sun {
+            display: block;
+            background: black;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-image: url(../gallery/sun3.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: sun 20s  linear infinite;
+
+        }
+        @keyframes sun
+        {
+            from {
+                transform: rotate(0deg);
+            }
+            to
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .earth {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            background-image: url(../gallery/earth3.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: earth 10s linear infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        @keyframes earth {
+            from {
+                transform: rotate(0deg) translateX(250px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(250px) rotate(-360deg);
+
+            }
+        }
+        .moon {
+            height: 20px;
+            width: 20px;
+            
+            border-radius: 50%;
+            background: radial-gradient(circle at 100px 100px, green, #fff);
+            animation: moon-rotate 5s linear infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+        @keyframes moon-rotate {
+            from {
+                transform: rotate(0deg) translateX(80px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(80px) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="sun">
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>

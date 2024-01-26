@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th {
+            border-left: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td,
+        th{
+            padding: 10px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th class="head"></th>
+            <th class="head"></th>
+            <th class="head"></th>
+            <th class="head"></th>
+        </tr>
+        <tr>
+            <td class="a">
+            </td>
+            <td class="b">
+            </td>
+            <td class="c">
+            </td>
+            <td class="e"><img class="d">
+            </td>
+
+        </tr>
+        <tr>
+
+            <td class="a">
+            </td>
+            <td class="b">
+            </td>
+            <td class="c">
+            </td>
+            <td class="e"><img class="d">
+            </td>
+        </tr>
+        <tr>
+
+            <td class="a">
+            </td>
+            <td class="b">
+            </td>
+            <td class="c">
+            </td>
+            <td class="e"><img class="d">
+            </td>
+        </tr>
+
+    </table>
+    <script>
+        var b = [
+            {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                "rating": {
+                    "rate": 3.9,
+                    "count": 120
+                }
+            },
+            {
+                "id": 2,
+                "title": "Mens Casual Premium Slim Fit T-Shirts ",
+                "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+                "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+                "rating": {
+                    "rate": 4.1,
+                    "count": 259
+                }
+            },
+            {
+                "id": 3,
+                "title": "Mens Cotton Jacket",
+                "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+                "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+                "rating": {
+                    "rate": 4.7,
+                    "count": 500
+                }
+            }]
+        //styling
+        var tableu=document.getElementsByTagName("table")
+        tableu[0].style.border="3px solid black";
+
+        var a = document.getElementsByClassName("a")
+        for (i = 0; i < a.length; i++) {
+            a[i].innerText = b[i]["id"];
+            a[i].style.borderLeft="3px solid "
+        }
+
+        var x = document.getElementsByClassName("b")
+        for (i = 0; i < x.length; i++) {
+            x[i].innerText = b[i]["title"];
+            x[i].style.borderLeft="3px solid black"
+        }
+        var y = document.getElementsByClassName("c")
+        for (i = 0; i < y.length; i++) {
+            y[i].innerText = b[i]["description"];
+            y[i].style.borderLeft="3px solid black"
+        }
+        var heading = document.getElementsByClassName("head")
+        for (i = 0; i < heading.length; i++) {
+            heading[i].innerText = Object.keys(b[0])[i]
+            heading[i].style.border="3px solid black"
+        }
+        var d = document.getElementsByClassName("d");
+        for (i = 0; i < d.length; i++) {
+            d[i].src = b[i].image;
+            d[i].style.height='150px';
+            d[i].style.width='200px';
+        }
+        var e=document.getElementsByClassName("e")
+        for(i in e)
+        {
+            e[i].style.borderLeft="3px solid black"
+        }
+    </script>
+</body>
+
+</html>

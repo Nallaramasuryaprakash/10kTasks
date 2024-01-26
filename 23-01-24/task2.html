@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+<script>
+    var my_skills=["Html","css","javascript"]
+    var langs=["Telugu","English","Hindi"]
+
+    var accessdivtag = document.getElementsByTagName("div")[0]
+    accessdivtag.style.border="1px solid black"
+    accessdivtag.style.width="600px"
+    accessdivtag.style.height="750px"
+    accessdivtag.style.margin="0px 0px 0px 450px"
+    accessdivtag.style.padding="10px"
+
+    var head1=document.createElement("h1")
+    head1.innerText="Resume"
+    accessdivtag.appendChild(head1);
+    head1.style.textAlign="center"
+    head1.style.margin="-10px 0px 0px 0px"
+
+    var my_name=document.createElement("p")
+    my_name.innerText="Nalla rama surya prakash"
+    accessdivtag.appendChild(my_name);
+    my_name.style.fontSize="20px";
+    
+    var my_img = document.createElement("img")
+    my_img.setAttribute("src", "./Prakashpic.jpg")
+    accessdivtag.appendChild(my_img);
+    my_img.style.width="90px";
+    my_img.style.float="right"
+    my_img.style.marginTop="-95px"
+    my_img.style.border="2px solid black"
+
+    var breakk = document.createElement("br")
+    accessdivtag.appendChild(breakk)
+
+    var line = document.createElement("hr")
+    accessdivtag.appendChild(line)
+
+    var fieldsett=document.createElement("fieldset")
+    accessdivtag.appendChild(fieldsett)
+
+    var legendtag = document.createElement("legend")
+    console.log(legendtag);
+    legendtag.innerText=" CAREER OBJECTIVE"
+    fieldsett.appendChild(legendtag)
+    legendtag.style.border="1px solid black"
+    legendtag.style.padding="3px"
+    legendtag.style.fontWeight="bold"
+
+    var summarytext=document.createElement("p")
+    summarytext.innerText="A position in an esteemed organization, with an opportunity to use my skills and knowledge to contribute to company goals."
+    fieldsett.appendChild(summarytext)
+
+    var breakk = document.createElement("br")
+    accessdivtag.appendChild(breakk)
+
+    var line = document.createElement("hr")
+    accessdivtag.appendChild(line)
+
+    var skills=document.createElement("h2")
+    skills.innerText="Technical skills :"
+    accessdivtag.appendChild(skills)
+
+    var ull=document.createElement("ul")
+    accessdivtag.appendChild(ull)
+
+    console.log(ull);
+
+    // method 1 to add text to elements/nodes
+    for(i=0;i<3;i++)
+    {
+        var list=document.createElement("li")
+        list.innerText=my_skills[i]
+        ull.appendChild(list)
+    }
+
+
+
+    var line = document.createElement("hr")
+    accessdivtag.appendChild(line)
+
+    var languages=document.createElement("h2")
+    languages.innerText="Languages:"
+    accessdivtag.appendChild(languages)
+    
+    var ul2=document.createElement("ul")
+    accessdivtag.appendChild(ul2)
+
+     // method 2 to add text to elements/nodes
+    for(i=0;i<3;i++)
+    {
+        var list=document.createElement("li")
+        list.setAttribute("class","lan")
+        ul2.appendChild(list)
+    }
+    ull2=document.getElementsByClassName("lan") 
+    console.log(ull2);
+
+    for(i in ull2)
+    {
+        ull2[i].innerText=langs[i]
+    }
+
+
+    var line = document.createElement("hr")
+    accessdivtag.appendChild(line)
+
+    var declare = document.createElement("h2")
+    declare.innerText="Declaration"
+    accessdivtag.appendChild(declare)
+
+    var dectext=document.createElement("p")
+    dectext.innerText="I hereby state that all the above furnished information is true and correct to the best of my knowledge and belief."
+    accessdivtag.appendChild(dectext)
+
+    var line = document.createElement("hr")
+    accessdivtag.appendChild(line)
+
+    var sign=document.createElement("h3")
+    sign.innerText="Signature :"
+    accessdivtag.appendChild(sign)
+
+    var signimg=document.createElement("img")
+    signimg.setAttribute("src","./sign.jpg")
+    accessdivtag.appendChild(signimg)
+    signimg.style.width="70px"
+    signimg.style.position="relative"
+    signimg.style.left="100px"
+    signimg.style.top="-43px"
+
+    var placeh3=document.createElement("h3")
+    placeh3.innerText="Place: "
+    accessdivtag.appendChild(placeh3)
+    placeh3.style.marginTop="-25px"
+
+    var place=document.createElement("span")
+    place.innerText="Kphb"
+    accessdivtag.appendChild(place)
+    place.style.position="relative"
+    place.style.left="54px"
+    place.style.top="-38px"
+
+    var link=document.createElement("a")
+    link.setAttribute("href","./file.jpg")
+    link.innerText="download"
+    accessdivtag.appendChild(link)
+    link.style.float="right"
+    link.style.marginTop="-40px"
+    link.style.textDecoration="none"
+</script>
+</html>

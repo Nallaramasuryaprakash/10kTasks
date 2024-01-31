@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        var user = localStorage.setItem('username', 'prakash')
+        var a = localStorage.getItem('username')
+        var btlogin = document.createElement("button")
+        document.body.appendChild(btlogin)
+        btlogin.innerText = "LOGIN"
+        btlogin.style.width="200px"
+        btlogin.style.height="50px"
+        btlogin.style.position="absolute"
+        btlogin.style.top="0px"
+        btlogin.style.bottom="0px"
+        btlogin.style.left="0px"
+        btlogin.style.right="0px"
+        btlogin.style.margin="auto"
+        btlogin.style.fontSize="20px"
+        btlogin.style.backgroundColor="orangered"
+        btlogin.style.border="1px solid orangered"
+        btlogin.style.color="white"
+
+
+        document.body.style.backgroundColor="black"
+        btlogin.addEventListener('click', function () {
+            var b = prompt("enter username")
+            while(a !== b) {
+                alert("enter a valid user name")
+                var b = prompt("enter username")
+            }
+            window.open("../29-1-24/cards2.html")
+        })
+    </script>
+</body>
+
+</html>

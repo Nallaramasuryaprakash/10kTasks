@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Username</label>
+        <input type="text" name="Username" placeholder="enter username"> &nbsp; <span style="display: none;">Enter valid
+            username</span>
+        <br><br>
+        <label>Password</label>
+        <input type="text" name="Password" placeholder="enter Password"> &nbsp; <span style="display: none;">Enter valid
+            password</span>
+        <br><br>
+        <label>Confirm-Password</label>
+        <input type="password" name="Password" placeholder="enter Password"> &nbsp; <span style="display: none;">Password
+            didn't match</span>
+        <br><br>
+        <label>MobileNumber</label>
+        <input type="tel" name="mobileNumber" placeholder="enter mobileNumber"> &nbsp; <span
+            style="display: none;">Enter valid mobileNumber</span>
+        <br><br>
+        <input type="submit" value="submit">
+        <h2></h2>
+    </form>
+    <script>
+        var a = [];
+        var formm = document.forms;
+        formm[0].addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log(event.target[0].value);
+            console.log(event.target[1].value);
+            console.log(event.target[2].value);
+            console.log(event.target[3].value);
+
+            console.log(a);
+            var spaan = document.getElementsByTagName("span")
+
+            if ((event.target[0].value).length != 5) {
+                event.target[0].style.border = "2px solid red"
+                spaan[0].style.display = "inline"
+                return;
+            }
+            else {
+                event.target[0].style.border = ""
+                spaan[0].style.display = "none"
+
+            }
+
+            if ((event.target[1].value).length != 6 || /\d/.test(event.target[1].value)) {
+                event.target[1].style.border = "2px solid red"
+                spaan[1].style.display = "inline"
+                return;
+            }
+            else {
+                event.target[1].style.border = ""
+                spaan[1].style.display = "none"
+            }
+
+            if (event.target[2].value !== event.target[1].value) {
+                event.target[2].style.border = "2px solid red";
+                spaan[2].style.display = "inline";
+                return;
+            } else {
+                event.target[2].style.border = "";
+                spaan[2].style.display = "none";
+            }
+
+            var mobileNumberRegex = /^[789]\d{9}$/;
+            if (mobileNumberRegex.test(event.target[3].value)) {
+                // Valid mobile number
+                event.target[3].style.border = "";
+                spaan[3].style.display = "none";
+            } else {
+                // Invalid mobile number
+                event.target[3].style.border = "2px solid red";
+                spaan[3].style.display = "inline";
+                return;
+            }
+
+            var error = document.getElementsByTagName("h2")
+            if (event.target[0].value === "" || event.target[1].value === "" || event.target[2].value === "" || event.target[3].value === "") {
+                error[0].innerText = "Fill all the details"
+                document.body.appendChild(error[0])
+            }
+            else {
+                error[0].style.display = "none"
+                window.open("./task2.1.html")
+
+
+                var data = {
+                    username: event.target[0].value,
+                    password: event.target[1].value,
+                    confirm: event.target[2].value,
+                    mobile: event.target[3].value
+
+                }
+                a.push(data)
+
+                event.target[0].value = ""
+                event.target[1].value = ""
+                event.target[2].value = ""
+                event.target[3].value = ""
+
+                localStorage.setItem("registration", JSON.stringify(a))
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

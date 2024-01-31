@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <img src="" alt=""> -->
+    <form>
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="username">
+        <br>
+        <label>Password</label>
+        <input type="text" name="password" placeholder="password">
+        <span style="display:none">invalid user</span>
+        <br>
+        <input type="submit" value="Login">
+        <button>See registered data</button>
+    </form>
+    <script>
+        var a = document.forms
+        a[0].addEventListener("submit", (event) => {
+            event.preventDefault()
+            var b = localStorage.getItem("registration")
+            arr1 = JSON.parse(b);
+            var getspan = document.getElementsByTagName("span");
+
+            c = 0; c1 = 0;
+
+            for (i = 0; i < arr1.length; i++) {
+                if (event.target[0].value == arr1[i].username) {
+                    c++;
+                }
+                if (event.target[1].value == arr1[i].password) {
+                    c1++;
+                }
+            }
+            if (c == 0 || c1 == 0) {
+                getspan[0].style.display = "inline"
+            }
+            else {
+                window.open("../30-1-24main/taskpages/cards2.html", "_self")
+            }
+        })
+        var bu = document.getElementsByTagName("button");
+        bu[0].addEventListener("click", () => {
+            window.open("./task2.3.html")
+        })
+
+    </script>
+</body>
+
+</html>

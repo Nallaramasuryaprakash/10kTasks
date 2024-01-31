@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td,
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // var storedData = localStorage.getItem("registration");
+        var gettingdata = localStorage.getItem("registration")
+        var data=JSON.parse(gettingdata)
+        console.log(data);
+
+
+        var gettable = document.createElement("table")
+        document.body.appendChild(gettable)
+        console.log(gettable);
+
+        var gettingtr = document.createElement("tr")
+        gettable.appendChild(gettingtr)
+        console.log(gettingtr);
+
+        var getth = document.createElement("th")
+        gettingtr.appendChild(getth)
+        getth.innerText = "Username"
+
+        var getth1 = document.createElement("th")
+        gettingtr.appendChild(getth1)
+        getth1.innerText = "Password"
+
+        var getth2 = document.createElement("th")
+        gettingtr.appendChild(getth2)
+        getth2.innerText = "Mobilenumber"
+
+
+        for (i = 0; i < data.length; i++) {
+
+            var gettr = document.createElement("tr")
+
+            var td1 = document.createElement("td")
+            td1.innerText = data[i].username
+            gettr.appendChild(td1)
+            td1.style.textAlign="center"
+
+            var td2 = document.createElement("td")
+            td2.innerText = data[i].password
+            gettr.appendChild(td2)
+            td2.style.textAlign="center"
+
+            var td3 = document.createElement("td")
+            td3.innerText = data[i].mobile
+            gettr.appendChild(td3)
+            td3.style.textAlign="center"
+
+            var gettable = document.getElementsByTagName("table");
+            gettable[0].appendChild(gettr);
+
+        }
+        // styling
+        gettable[0].style.border = "2px solid black";
+        gettable[0].style.borderCollapse="collapse";
+
+        getth.style.border = "2px solid black"
+        getth.style.padding = "10px"
+            
+        console.log(document.body);
+        
+    </script>
+</body>
+
+</html>
